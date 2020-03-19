@@ -1,0 +1,40 @@
+.root{
+    -fx-background-color: white;
+}
+#mainContainer{
+    -fx-text-fill: black;
+    -fx-font-size: 25px;
+}
+#outputField{
+    -fx-font-size: 40px;
+}
+.separator{
+    -fx-background-color: #EFE9E8;
+}
+.button
+{
+    -fx-background-color: white;
+}
+.button:hover
+{
+    -fx-background-color: #EFE9E8;
+}
+#clearButton, #delButton, #percButton, #divButton, #multButton, #extrButton, #addButton, #eqButton, #changeButton {
+    -fx-text-fill: #FC7F1D;
+}
+#divButton, #extrButton, #addButton, #eqButton{
+    -fx-font-size: 30px;
+}
+#changeButton{
+    -fx-background-radius: 10px;
+    -fx-background-color: #FC7F1D;
+    -fx-text-fill: black;
+    -fx-font-size: 18px;
+}
+
+#eqButton{
+    -fx-background-radius: 100px;
+    -fx-background-color: #FC7F1D;
+    -fx-background-insets: 0 13;
+    -fx-text-fill: black;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Label fx:id="outputField" alignment="BOTTOM_RIGHT" prefHeight="164.0" prefWidth="400.0" text="0">
+         <font>
+            <Font size="12.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </Label>
+      <Separator opacity="0.2" prefHeight="0.0" prefWidth="400.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Separator>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0">
+         <children>
+            <Button fx:id="clearButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processClear" prefHeight="200.0" prefWidth="100.0" text="C" />
+            <Button fx:id="delButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDelete" prefHeight="200.0" prefWidth="100.0" text="&lt;&lt;" />
+            <Button fx:id="percButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="200.0" prefWidth="100.0" text="\%" />
+            <Button fx:id="divButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="200.0" prefWidth="100.0" text="÷" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="7" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="8" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="9" />
+            <Button fx:id="multButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="200.0" prefWidth="100.0" text="x" />
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="4" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="5" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="6" />
+            <Button fx:id="extrButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="200.0" prefWidth="100.0" text="-" />
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="1" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="2" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="3" />
+            <Button fx:id="addButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="200.0" prefWidth="100.0" text="+" />
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="changeButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#changeTheme" prefHeight="200.0" prefWidth="100.0" text="Change  theme" textAlignment="CENTER" wrapText="true" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="0" />
+            <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDot" prefHeight="200.0" prefWidth="100.0" text="." />
+            <Button fx:id="eqButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="100.0" prefWidth="100.0" text="=" />
+         </children></HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
