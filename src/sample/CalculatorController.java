@@ -78,7 +78,9 @@ public class CalculatorController {
     public void processEquals(){
         if (!(firstDigit.isEmpty() || secondDigit.isEmpty())){
             output = ComputationHandler.compute(operator, firstDigit, secondDigit);
-            firstDigit = secondDigit = operator = "";
+            output = output.matches(".*\\.0$") ? output.substring(0, output.length() - 2) : output;
+            firstDigit = output;
+            secondDigit = operator = "";
             outputField.setText(output);
         }
     }
