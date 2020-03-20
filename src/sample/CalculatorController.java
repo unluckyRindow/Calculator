@@ -5,14 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 
 public class CalculatorController {
     @FXML
     Label outputField;
 
 
-    String firstDigit = "";
+    String firstDigit = "0";
     String secondDigit = "";
     String operator = "";
     private String output;
@@ -33,7 +32,7 @@ public class CalculatorController {
         if (output.length() <= 1){
             firstDigit = output = "0";
         } else {
-            if (!Character.isDigit(output.charAt(output.length() - 1))) {
+            if (!Character.isDigit(output.charAt(output.length() - 1)) && output.charAt(output.length() - 1) != '.') {
                 operator = "";
             } else if (!operator.isEmpty()){
                 secondDigit = secondDigit.substring(0,secondDigit.length() - 1);
@@ -108,9 +107,5 @@ public class CalculatorController {
             }
         }
         outputField.setText(output);
-    }
-
-    public void debug(MouseEvent actionEvent){
-        System.out.println("first: " + firstDigit + "    operator: " + operator + "    second: " + secondDigit + "    output: " + output);
     }
 }

@@ -17,8 +17,7 @@ public class ComputationHandler{
                     if (result == Double.POSITIVE_INFINITY || result == Double.NEGATIVE_INFINITY) throw new ArithmeticException();
                     return result.toString();
                 } catch (ArithmeticException e){
-                    System.out.println("zero dividing");
-                    return "XD";
+                    return "Can't divide by zero";
                 }
         }
         return "0";
