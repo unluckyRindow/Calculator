@@ -9,8 +9,7 @@
     -fx-text-fill: white;
 }
 .separator{
-    -fx-background-radius: 10px;
-    -fx-background-color: #393434;
+    -fx-opacity: 0.2;
 }
 .button
 {

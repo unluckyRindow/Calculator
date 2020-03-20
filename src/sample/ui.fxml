@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox fx:id="mainContainer" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CalculatorController">
    <children>
       <Label fx:id="outputField" alignment="BOTTOM_RIGHT" prefHeight="164.0" prefWidth="400.0" text="0">
          <font>
@@ -19,7 +19,7 @@
             <Insets right="10.0" />
          </padding>
       </Label>
-      <Separator opacity="0.2" prefHeight="0.0" prefWidth="400.0">
+      <Separator prefHeight="0.0" prefWidth="400.0">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor>
@@ -58,7 +58,7 @@
             <Button fx:id="changeButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#changeTheme" prefHeight="200.0" prefWidth="100.0" text="Change  theme" textAlignment="CENTER" wrapText="true" />
             <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDigit" prefHeight="200.0" prefWidth="100.0" text="0" />
             <Button alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDot" prefHeight="200.0" prefWidth="100.0" text="." />
-            <Button fx:id="eqButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="100.0" prefWidth="100.0" text="=" />
+            <Button fx:id="eqButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processEquals" prefHeight="100.0" prefWidth="100.0" text="=" />
          </children></HBox>
    </children>
    <padding>
