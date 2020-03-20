@@ -1,22 +1,32 @@
 package sample;
 
 public class ComputationHandler{
-    //TODO IMPLEMENT ALL CALCULATIONS
     public static String compute (String operator, String firstDigit, String secondDigit){
-        boolean intCase = !firstDigit.contains(".") && !secondDigit.contains(".");
+        Double firstNumber = Double.parseDouble(firstDigit);
+        Double secondNumber = Double.parseDouble((secondDigit));
         switch (operator){
             case "+":
-                return intCase ? ((Integer)(Integer.parseInt(firstDigit) + Integer.parseInt(secondDigit))).toString()
-                        : ((Double)(Double.parseDouble(firstDigit) + Double.parseDouble(secondDigit))).toString();
+                return ((Double)(firstNumber + secondNumber)).toString();
             case "-":
-                return intCase ? ((Integer)(Integer.parseInt(firstDigit) - Integer.parseInt(secondDigit))).toString()
-                        : ((Double)(Double.parseDouble(firstDigit) - Double.parseDouble(secondDigit))).toString();
+                return ((Double)(firstNumber - secondNumber)).toString();
             case "x":
-                return intCase ? ((Integer)(Integer.parseInt(firstDigit) * Integer.parseInt(secondDigit))).toString()
-                        : ((Double)(Double.parseDouble(firstDigit) * Double.parseDouble(secondDigit))).toString();
+                return ((Double)(firstNumber * secondNumber)).toString();
             case "÷":
-                return intCase ? ((Integer)(Integer.parseInt(firstDigit) / Integer.parseInt(secondDigit))).toString()
-                        : ((Double)(Double.parseDouble(firstDigit) / Double.parseDouble(secondDigit))).toString();
+                try {
+                    Double result = firstNumber / secondNumber;
+                    if (result == Double.POSITIVE_INFINITY || result == Double.NEGATIVE_INFINITY) throw new ArithmeticException();
+                    return result.toString();
+                } catch (ArithmeticException e){
+                    System.out.println("zero dividing");
+                    return "XD";
+                }
+        }
+        return "0";
+    }
+
+    public static String compute(String operator, String digit){
+        if (operator.equals("%")) {
+            return ((Double)(Double.parseDouble(digit) / 100)).toString();
         }
         return "0";
     }

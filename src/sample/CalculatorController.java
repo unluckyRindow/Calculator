@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 
 public class CalculatorController {
     @FXML
@@ -35,9 +36,9 @@ public class CalculatorController {
             if (!Character.isDigit(output.charAt(output.length() - 1))) {
                 operator = "";
             } else if (!operator.isEmpty()){
-                secondDigit = secondDigit.substring(0,output.length() - 1);
+                secondDigit = secondDigit.substring(0,secondDigit.length() - 1);
             } else {
-                firstDigit = firstDigit.substring(0,output.length() - 1);
+                firstDigit = firstDigit.substring(0,firstDigit.length() - 1);
             }
             output = output.substring(0,output.length() - 1);
         }
@@ -51,7 +52,7 @@ public class CalculatorController {
 
     public void processDigit(ActionEvent actionEvent) {
         output = outputField.getText();
-        if (output.equals("0")) {
+        if (output.equals("0") || output.equals("Can't divide by zero")) {
             firstDigit = output = ((Button) actionEvent.getSource()).getText();
         } else {
             output = output + ((Button)actionEvent.getSource()).getText();
@@ -62,10 +63,17 @@ public class CalculatorController {
             }
         }
         outputField.setText(output);
-
-        System.out.println("first: " + firstDigit + "    operator: " + operator + "    second: " + secondDigit);
     }
-    //TODO add percentage method
+
+    public void processPercent(ActionEvent actionEvent){
+        if (secondDigit.isEmpty()){
+            output = ComputationHandler.compute("%", firstDigit);
+            output = output.matches(".*\\.0$") ? output.substring(0, output.length() - 2) : output;
+            firstDigit = output;
+            outputField.setText(output);
+        }
+    }
+
     public void processSign(ActionEvent actionEvent) {
         output = outputField.getText();
         if (operator.isEmpty() || output.matches(".*[\\+\\-÷x]")){
@@ -100,5 +108,9 @@ public class CalculatorController {
             }
         }
         outputField.setText(output);
+    }
+
+    public void debug(MouseEvent actionEvent){
+        System.out.println("first: " + firstDigit + "    operator: " + operator + "    second: " + secondDigit + "    output: " + output);
     }
 }

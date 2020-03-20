@@ -8,7 +8,7 @@
 
 <VBox fx:id="mainContainer" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CalculatorController">
    <children>
-      <Label fx:id="outputField" alignment="BOTTOM_RIGHT" prefHeight="164.0" prefWidth="400.0" text="0">
+      <Label fx:id="outputField" alignment="BOTTOM_RIGHT" onMouseClicked="#debug" prefHeight="164.0" prefWidth="400.0" text="0">
          <font>
             <Font size="12.0" />
          </font>
@@ -28,7 +28,7 @@
          <children>
             <Button fx:id="clearButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processClear" prefHeight="200.0" prefWidth="100.0" text="C" />
             <Button fx:id="delButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processDelete" prefHeight="200.0" prefWidth="100.0" text="&lt;&lt;" />
-            <Button fx:id="percButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="200.0" prefWidth="100.0" text="\%" />
+            <Button fx:id="percButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processPercent" prefHeight="200.0" prefWidth="100.0" text="\%" />
             <Button fx:id="divButton" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#processSign" prefHeight="200.0" prefWidth="100.0" text="÷" />
          </children>
       </HBox>
