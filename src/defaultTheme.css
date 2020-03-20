@@ -1,5 +1,5 @@
 .root{
-    -fx-background-color: white;
+    -fx-background-color: #EEE9E9;
 }
 #mainContainer{
     -fx-text-fill: black;
@@ -9,15 +9,15 @@
     -fx-font-size: 40px;
 }
 .separator{
-    -fx-background-color: #EFE9E8;
+    -fx-background-color: #AAA6A6;
 }
 .button
 {
-    -fx-background-color: white;
+    -fx-background-color: #EEE9E9;
 }
 .button:hover
 {
-    -fx-background-color: #EFE9E8;
+    -fx-background-color: #DBD9D9;
 }
 #clearButton, #delButton, #percButton, #divButton, #multButton, #extrButton, #addButton, #eqButton, #changeButton {
     -fx-text-fill: #FC7F1D;
